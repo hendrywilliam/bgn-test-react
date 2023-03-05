@@ -2,10 +2,33 @@
   @apply bg-black w-full h-max font-bold;
 
   .navbar-primary {
-    @apply flex w-screen xl:w-full h-[150px] align-middle px-5 xl:px-20;
+    @apply flex w-screen xl:w-full h-[150px] align-middle px-5 xl:px-20 relative;
+
+    .navbar-menu-mobile {
+      @apply flex lg:hidden h-full text-white justify-center align-middle px-4 relative;
+
+      .navbar-menu-mobile-button {
+        @apply self-center cursor-pointer;
+      }
+    }
+
+    .navbar-menu-mobile-content {
+      @apply h-full w-2/3 z-20 text-white bg-neutral-800 left-0 p-10;
+
+      div {
+        @apply w-full flex justify-end;
+        button {
+          @apply text-6xl text-right;
+        }
+      }
+
+      .navbar-menu-mobile-content-links {
+        @apply flex flex-col text-xl gap-5;
+      }
+    }
 
     .navbar-socialmedias {
-      @apply xl:flex w-1/3 hidden;
+      @apply w-1/3;
 
       div {
         @apply w-full flex flex-row justify-start align-middle self-center gap-10;

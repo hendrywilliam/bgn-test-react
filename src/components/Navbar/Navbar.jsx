@@ -10,12 +10,13 @@ import { useSearch } from "@/hooks/useSearch";
 import SearchItems from "../Elements/SearchItem/SearchItem";
 import { Link } from "react-router-dom";
 import { HiXMark } from "react-icons/hi2";
-// import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineMenu } from "react-icons/ai";
 import Loading from "../Loading";
 
 export default function Navbar() {
   const [inputSearch, setInputSearch] = useState("");
   const [searchShow, setSearchShow] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [filter, setFilter] = useState("people");
 
   const { loading, data, error } = useSearch(inputSearch, filter);
@@ -25,10 +26,56 @@ export default function Navbar() {
     setInputSearch("");
   }
 
+  function mobileMenu() {
+    setShowMobileMenu(!showMobileMenu);
+  }
+
   return (
     <div className="navbar">
       <div className="navbar-primary">
-        <div className="navbar-socialmedias">
+        <div className="navbar-menu-mobile">
+          <AiOutlineMenu
+            className="navbar-menu-mobile-button"
+            size={30}
+            onClick={mobileMenu}
+          />
+        </div>
+        {/* navbar menu mobile content */}
+        <div
+          className={`${
+            showMobileMenu ? "fixed" : "hidden"
+          } navbar-menu-mobile-content`}
+        >
+          <div>
+            <button onClick={() => mobileMenu()}>&times;</button>
+          </div>
+          <div className="navbar-menu-mobile-content-links">
+            <Link to={"/"}>HOME</Link>
+            <Link to={"/people"} className="nav-link">
+              PEOPLE
+            </Link>
+            <Link to={"/films"} className="nav-link">
+              FILMS
+            </Link>
+            <Link to={"/starships"} className="nav-link">
+              STARSHIPS
+            </Link>
+            <Link to={"/vehicles"} className="nav-link">
+              VEHICLES
+            </Link>
+            <Link to={"/species"} className="nav-link">
+              SPECIES
+            </Link>
+            <Link to={"/planets"} className="nav-link">
+              PLANETS
+            </Link>
+          </div>
+        </div>
+        <div
+          className={`navbar-socialmedias ${
+            searchShow ? "hidden" : "xl:flex hidden"
+          }`}
+        >
           <div>
             <a href="https://twitter.com/starwars">
               <FaTwitter color="white" size={30} />
