@@ -1,0 +1,7 @@
+.hero {
+  @apply w-full h-[1300px];
+
+  img {
+    @apply h-full w-full object-cover object-center;
+  }
+}

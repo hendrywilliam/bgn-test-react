@@ -1,0 +1,26 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import url("./components/Navbar/_Navbar.scss");
+@import url("./components/Layouts/ContentLayout/_ContentLayout.scss");
+@import url("./components/Hero/_Hero.scss");
+@import url("./components/Elements/SearchItem/_SearchItem.scss");
+@import url("./components/Footer/_Footer.scss");
+@import url("./components/Elements/ListItem/_ListItem.scss");
+@import url("./pages/People/_People.scss");
+@import url("./pages/Detail/PeopleDetail/_PeopleDetail.scss");
+@import url("./components/Loading/_Loading.scss");
+
+:root {
+  font-family: "Inter", sans-serif;
+  font-synthesis: none;
+  background-color: black;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  @apply box-border;
+}

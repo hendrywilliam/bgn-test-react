@@ -1,0 +1,7 @@
+.loading {
+  @apply text-white w-full h-max flex flex-col text-center justify-center align-middle;
+
+  .image-loading {
+    @apply flex self-center m-0;
+  }
+}

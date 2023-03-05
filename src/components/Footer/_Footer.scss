@@ -1,0 +1,7 @@
+.footer {
+  @apply w-full h-max bg-[#111010] text-center p-4;
+
+  .footer-text {
+    @apply text-white;
+  }
+}
