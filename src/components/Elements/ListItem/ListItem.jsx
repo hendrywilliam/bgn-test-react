@@ -23,4 +23,5 @@ export default function ListItem({ name, id }) {
 ListItem.propTypes = {
   name: PropTypes.string,
   id: PropTypes.any,
+  url: PropTypes.string,
 };

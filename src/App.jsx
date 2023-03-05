@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 
 const People = lazy(() => import("./pages/People"));
 const DetailPeople = lazy(() => import("./pages/Detail/PeopleDetail"));
+const Films = lazy(() => import("./pages/Films"));
 
 function App() {
   return (
@@ -23,6 +24,14 @@ function App() {
         element={
           <Suspense fallback={<>...</>}>
             <DetailPeople />
+          </Suspense>
+        }
+      />
+      <Route
+        path="films"
+        element={
+          <Suspense fallback={<>...</>}>
+            <Films />
           </Suspense>
         }
       />

@@ -1,0 +1,7 @@
+.films-list-title {
+  @apply w-full flex flex-col justify-center gap-6 text-2xl px-5 sm:px-10 xl:px-20 text-white;
+
+  h1 {
+    @apply text-5xl sm:text-7xl text-white font-bold self-center p-0;
+  }
+}

@@ -1,18 +1,18 @@
 .detail-main-container {
-  @apply w-2/3 min-h-[600px] h-max bg-black border-2 self-center p-6;
+  @apply w-full xl:w-2/3  min-h-[600px] h-max bg-black border-2 self-center p-6;
 
   h1 {
-    @apply text-7xl font-bold text-center text-yellow-300 self-center;
+    @apply text-3xl xl:text-7xl font-bold text-center text-white self-center;
   }
 
   .detail-main-info {
-    @apply w-full h-full grid grid-cols-3 mt-5;
+    @apply w-full h-full grid grid-cols-1 xl:grid-cols-3 mt-5;
 
     div {
       @apply h-full my-4 text-center;
 
       h2 {
-        @apply text-3xl font-bold;
+        @apply text-lg xl:text-3xl font-bold;
       }
 
       p {

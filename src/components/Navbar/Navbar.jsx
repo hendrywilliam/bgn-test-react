@@ -173,9 +173,11 @@ export default function Navbar() {
             </p>
           </li>
           <li>
-            <a className="nav-link" href="#">
-              FILMS
-            </a>
+            <p>
+              <Link to={"/films"} className="nav-link">
+                FILMS
+              </Link>
+            </p>
           </li>
           <li>
             <p>

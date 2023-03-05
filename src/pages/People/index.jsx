@@ -7,6 +7,7 @@ import { getPeople } from "@/lib/redux/features/peopleSlice";
 import Footer from "@/components/Footer/Footer";
 import ListItem from "@/components/Elements/ListItem/ListItem";
 import Loading from "@/components/Loading";
+import ContentLayout from "@/components/Layouts/ContentLayout/ContentLayout";
 
 export default function People() {
   useTitle("Starwars Wikipedia — People");
@@ -51,18 +52,16 @@ export default function People() {
         </div>
       </div>
       <MainLayouts>
-        <>
-          {isLoading ? (
-            <Loading />
-          ) : (
-            data?.map((item) => {
-              const url = item.url;
-              const parts = url.split("/");
-              const id = parts[parts.length - 2];
-              return <ListItem key={item.name} name={item.name} id={id} />;
-            })
-          )}
-        </>
+        {isLoading ? (
+          <Loading />
+        ) : (
+          data?.map((item) => {
+            const url = item.url;
+            const parts = url.split("/");
+            const id = parts[parts.length - 2];
+            return <ListItem key={item.name} name={item.name} id={id} />;
+          })
+        )}
       </MainLayouts>
       <Footer />
     </div>
