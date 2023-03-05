@@ -16,7 +16,7 @@ export default function PeopleDetail() {
 
   useEffect(() => {
     dispatch(getDetailPeople(id));
-  }, []);
+  }, [id]);
 
   return (
     <MainLayout>

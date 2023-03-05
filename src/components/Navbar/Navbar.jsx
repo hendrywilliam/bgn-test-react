@@ -19,7 +19,7 @@ export default function Navbar() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [filter, setFilter] = useState("people");
 
-  const { loading, data, error } = useSearch(inputSearch, filter);
+  const { loading, data } = useSearch(inputSearch, filter);
 
   function showSearch() {
     setSearchShow(!searchShow);
@@ -155,9 +155,18 @@ export default function Navbar() {
                   ""
                 )}
                 {data.map((item, index) => {
-                  return <SearchItems key={index} name={item.name} />;
+                  const url = item.url;
+                  const parts = url.split("/");
+                  const id = parts[parts.length - 2];
+                  return (
+                    <SearchItems
+                      key={index}
+                      name={item.name}
+                      id={id}
+                      filter={filter}
+                    />
+                  );
                 })}
-                {error ? <li>We cannot reach the server :(!</li> : ""}
               </ul>
             </div>
           </div>

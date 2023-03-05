@@ -7,7 +7,6 @@ import { getPeople } from "@/lib/redux/features/peopleSlice";
 import Footer from "@/components/Footer/Footer";
 import ListItem from "@/components/Elements/ListItem/ListItem";
 import Loading from "@/components/Loading";
-import ContentLayout from "@/components/Layouts/ContentLayout/ContentLayout";
 
 export default function People() {
   useTitle("Starwars Wikipedia — People");
