@@ -1,5 +1,8 @@
-# BGN TEST REACT
-## NAMING CONVENTION
+# DOKUMENTASI - BGN TEST REACT 
+## LIVE DEMO
+https://starwars-react-bgn.netlify.app/
+
+## PENAMAAN FILE/FOLDER/FUNCTION
 * Components (Page, Element, Etc) menggunakan PascalCase (ex: /components/MainLayout.jsx) <br>
 * Function menggunakan camelCase (ex: /helper/randomAvatar)
 
@@ -13,15 +16,16 @@ Setiap komponen baik itu elemen atau halaman terisolasi di dalam file masing-mas
 * List Species
 * List Planets
 
+NOTE: Semua item list diluar dari list people akan *redirect* ke halaman index/home jika di-klik. <br>
 Semua data diperoleh dari https://swapi.dev/documentation/
 
 
 ## HOW TO USE
 * npm run dev
 * npm run lint
+* npm run build 
 
-
-## STACKS:
+## LIST TEKNOLOGI YANG DIPAKAI:
 * React.js
 * React Router DOM
 * Redux
