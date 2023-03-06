@@ -33,8 +33,27 @@ export default function People() {
   return (
     <div>
       <Navbar />
+      <h1 className="title-section">PEOPLE LIST</h1>
+      <MainLayouts>
+        {isLoading ? (
+          <Loading />
+        ) : (
+          data?.map((item) => {
+            const url = item.url;
+            const parts = url.split("/");
+            const id = parts[parts.length - 2];
+            return (
+              <ListItem
+                key={item.name}
+                name={item.name}
+                url={"detail/"}
+                id={id}
+              />
+            );
+          })
+        )}
+      </MainLayouts>
       <div className="navigate-container">
-        <h1>PEOPLE LIST</h1>
         <div>
           <button
             disabled={prev === null ? true : false}
@@ -50,18 +69,6 @@ export default function People() {
           </button>
         </div>
       </div>
-      <MainLayouts>
-        {isLoading ? (
-          <Loading />
-        ) : (
-          data?.map((item) => {
-            const url = item.url;
-            const parts = url.split("/");
-            const id = parts[parts.length - 2];
-            return <ListItem key={item.name} name={item.name} id={id} />;
-          })
-        )}
-      </MainLayouts>
       <Footer />
     </div>
   );

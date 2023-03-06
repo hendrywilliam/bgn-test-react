@@ -1,7 +1,17 @@
 .hero {
-  @apply w-full h-[1300px];
+  height: calc(100vh - 260px);
+
+  @media (max-width: 516px) {
+    height: calc(100vh - 240px);
+  }
+
+  @media (max-width: 1284px) {
+    height: calc(100vh - 220px);
+  }
+
+  @apply w-full;
 
   img {
-    @apply h-full w-full object-cover object-center;
+    @apply h-full w-full object-cover object-top;
   }
 }

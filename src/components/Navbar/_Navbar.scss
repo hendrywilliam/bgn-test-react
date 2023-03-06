@@ -67,21 +67,21 @@
         @apply min-h-max w-full self-end mr-2 bg-black z-10 relative rounded-lg;
 
         ul {
-          @apply bg-black max-h-[400px] min-h-0 overflow-y-auto w-full absolute mt-1 rounded-lg;
+          @apply bg-black w-full max-h-[400px] min-h-0 overflow-y-auto absolute mt-1 rounded-lg top-2;
         }
       }
     }
   }
 
   .navbar-secondary {
-    @apply w-full py-3 px-20 border-t-2 lg:flex justify-center hidden;
+    @apply w-full py-3 px-20 border-y-2 lg:flex justify-center hidden;
 
     ul {
       @apply flex text-sm xl:text-xl justify-center align-middle gap-10 xl:gap-16;
     }
 
     .nav-link {
-      @apply text-white pb-2 hover:border-b-2 focus:outline-none;
+      @apply text-white pb-2 focus:outline-none hover:text-starwars-yellow;
     }
   }
 }

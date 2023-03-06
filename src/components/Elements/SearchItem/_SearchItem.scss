@@ -1,7 +1,7 @@
 .search-item {
-  @apply bg-black p-2 hover:bg-[#111010];
+  @apply bg-black p-2 hover:bg-[#111010] w-full;
 
-  p {
-    @apply text-sm font-normal;
+  h1 {
+    @apply text-xl;
   }
 }

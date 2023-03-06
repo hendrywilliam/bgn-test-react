@@ -146,7 +146,7 @@ export default function Navbar() {
               </button>
             </div>
             <div className="result-list-search">
-              <ul>
+              <ul className={`${searchShow ? "" : "hidden"} `}>
                 {loading === true ? (
                   <li>
                     <Loading />
@@ -196,24 +196,32 @@ export default function Navbar() {
             </p>
           </li>
           <li>
-            <a className="nav-link" href="#">
-              PLANETS
-            </a>
+            <p>
+              <Link to={"/planets"} className="nav-link">
+                PLANETS
+              </Link>
+            </p>
           </li>
           <li>
-            <a className="nav-link" href="#">
-              SPECIES
-            </a>
+            <p>
+              <Link to={"/species"} className="nav-link">
+                SPECIES
+              </Link>
+            </p>
           </li>
           <li>
-            <a className="nav-link" href="#">
-              STARSHIPS
-            </a>
+            <p>
+              <Link to={"/starships"} className="nav-link">
+                STARSHIPS
+              </Link>
+            </p>
           </li>
           <li>
-            <a className="nav-link" href="#">
-              VEHICLES
-            </a>
+            <p>
+              <Link to={"/vehicles"} className="nav-link">
+                VEHICLES
+              </Link>
+            </p>
           </li>
         </ul>
       </div>

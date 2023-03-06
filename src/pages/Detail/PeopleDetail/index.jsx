@@ -7,6 +7,7 @@ import ContentLayout from "@/components/Layouts/ContentLayout/ContentLayout";
 import Footer from "@/components/Footer/Footer";
 import MainLayout from "@/components/Layouts/MainLayout/MainLayout";
 import Loading from "@/components/Loading";
+import BackButton from "@/components/Elements/BackButton/BackButton";
 
 export default function PeopleDetail() {
   const { id } = useParams();
@@ -89,6 +90,7 @@ export default function PeopleDetail() {
             </>
           )}
         </div>
+        <BackButton url="/people" />
       </ContentLayout>
       <Footer />
     </MainLayout>

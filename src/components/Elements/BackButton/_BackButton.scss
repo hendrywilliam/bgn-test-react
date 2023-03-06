@@ -1,0 +1,7 @@
+.back-button {
+  @apply w-full text-white flex justify-center mt-10;
+
+  button {
+    @apply font-bold w-56 text-2xl p-4 border-2 rounded-full bg-[#111010];
+  }
+}

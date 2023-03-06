@@ -1,7 +1,7 @@
 .footer {
-  @apply w-full h-max bg-[#111010] text-center p-4;
+  @apply flex w-full h-max bg-[#111010] justify-center align-middle text-center p-4;
 
   .footer-text {
-    @apply text-white;
+    @apply text-white text-base m-0;
   }
 }

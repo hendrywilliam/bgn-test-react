@@ -19,15 +19,15 @@ export default function Films() {
   return (
     <MainLayout>
       <Navbar />
-      <div className="films-list-title">
-        <h1>FILMS LIST</h1>
-      </div>
+      <h1 className="title-section">FILMS LIST</h1>
       <ContentLayout>
         {isLoading ? (
           <Loading />
         ) : (
           data?.map((item) => {
-            return <ListItem name={item.title} key={item.title} />;
+            return (
+              <ListItem name={item.title} key={item.title} url={"/"} id={"#"} />
+            );
           })
         )}
       </ContentLayout>
