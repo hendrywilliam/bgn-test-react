@@ -10,7 +10,7 @@ const initialState = {
   data: null,
   next: "",
   prev: "",
-  isLoading: true,
+  isLoading: false,
 };
 
 export const peopleSlice = createSlice({

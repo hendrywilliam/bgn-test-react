@@ -42,7 +42,7 @@ export default function Starships() {
           })
         )}
       </ContentLayout>
-      <div className="navigate-container">
+      <div className={`${isLoading ? "hidden" : "flex"} navigate-container`}>
         <div>
           <button
             disabled={prev === null ? true : false}

@@ -40,7 +40,7 @@ export default function Planets() {
           })
         )}
       </ContentLayout>
-      <div className="navigate-container">
+      <div className={`${isLoading ? "hidden" : "flex"} navigate-container`}>
         <div>
           <button
             disabled={prev === null ? true : false}

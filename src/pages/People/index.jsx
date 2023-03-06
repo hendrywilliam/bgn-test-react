@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar/Navbar";
-import MainLayouts from "@/components/Layouts/ContentLayout/ContentLayout";
+import ContentLayout from "@/components/Layouts/ContentLayout/ContentLayout";
 import useTitle from "@/hooks/useTitle";
 import { useDispatch, useSelector } from "react-redux";
 import { getPeople } from "@/lib/redux/features/peopleSlice";
@@ -23,18 +23,14 @@ export default function People() {
   };
 
   useEffect(() => {
-    const check = dispatch(getPeople(page));
-    // clean up
-    return () => {
-      check.abort();
-    };
+    dispatch(getPeople(page));
   }, [page]);
 
   return (
     <div>
       <Navbar />
       <h1 className="title-section">PEOPLE LIST</h1>
-      <MainLayouts>
+      <ContentLayout>
         {isLoading ? (
           <Loading />
         ) : (
@@ -52,8 +48,8 @@ export default function People() {
             );
           })
         )}
-      </MainLayouts>
-      <div className="navigate-container">
+      </ContentLayout>
+      <div className={`${isLoading ? "hidden" : "flex"} navigate-container`}>
         <div>
           <button
             disabled={prev === null ? true : false}
