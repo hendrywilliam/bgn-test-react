@@ -6,12 +6,12 @@
 Setiap komponen baik itu elemen atau halaman terisolasi di dalam file masing-masing, harapannya gampang untuk di*maintain* kedepannya.
 
 ## FITUR
-List Films
-List Characters/ People -> Detail Character
-List Starships
-List Vehicles
-List Species
-List Planets
+* List Films
+* List Characters/ People -> Detail Character
+* List Starships
+* List Vehicles
+* List Species
+* List Planets
 
 Semua data diperoleh dari https://swapi.dev/documentation/
 
