@@ -27,6 +27,8 @@ Semua data diperoleh dari https://swapi.dev/documentation/
 
 ## LIST TEKNOLOGI YANG DIPAKAI:
 * React.js
+* React Lazy
+* React Icons
 * React Router DOM
 * Redux
 * Redux Toolkit/Redux Asnyc Thunk (async handler)
@@ -40,3 +42,13 @@ Semua data diperoleh dari https://swapi.dev/documentation/
 * Supabase Bucket
 * Javascript
 * HTML
+
+## SCREENSHOTS
+### Halaman awal
+![Screenshot1](https://trpsidwnzkgefmvrmziw.supabase.co/storage/v1/object/public/avatars/ss1-bgn-react.png)
+### Halaman list (characters)
+![Screenshot2](https://trpsidwnzkgefmvrmziw.supabase.co/storage/v1/object/public/avatars/ss2-bgn-react.png)
+### Responsivitas
+![Screenshot3](https://trpsidwnzkgefmvrmziw.supabase.co/storage/v1/object/public/avatars/ss3-bgn-react.png)
+### Responsivitas #2
+![Screenshot4](https://trpsidwnzkgefmvrmziw.supabase.co/storage/v1/object/public/avatars/ss4-bgn-react.png)
