@@ -3,5 +3,9 @@
 
   .page-loading-image {
     @apply w-max h-max self-center;
+
+    img {
+      @apply w-56 h-24;
+    }
   }
 }
