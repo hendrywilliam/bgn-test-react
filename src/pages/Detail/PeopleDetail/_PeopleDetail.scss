@@ -1,22 +1,26 @@
-.detail-main-container {
-  @apply w-full xl:w-2/3 h-max bg-black border-2 self-center p-6;
+.outer-detail-main-container {
+  @apply w-full h-max p-4 flex justify-center align-middle;
 
-  h1 {
-    @apply text-4xl font-bold text-center text-white;
-  }
+  .detail-main-container {
+    @apply w-full xl:w-2/3 h-max bg-black border-2 self-center p-6;
 
-  .detail-main-info {
-    @apply w-full h-full grid grid-cols-1 xl:grid-cols-3 mt-5;
+    h1 {
+      @apply text-4xl font-bold text-center text-white;
+    }
 
-    div {
-      @apply h-full my-4 text-center;
+    .detail-main-info {
+      @apply w-full h-full grid grid-cols-1 xl:grid-cols-3 mt-5;
 
-      h2 {
-        @apply text-lg xl:text-3xl font-bold text-starwars-yellow;
-      }
+      div {
+        @apply h-full my-4 text-center;
 
-      p {
-        @apply mt-2 text-lg;
+        h2 {
+          @apply text-lg xl:text-3xl font-bold text-starwars-yellow;
+        }
+
+        p {
+          @apply mt-2 text-lg;
+        }
       }
     }
   }

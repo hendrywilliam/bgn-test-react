@@ -23,72 +23,74 @@ export default function PeopleDetail() {
     <MainLayout>
       <Navbar />
       <ContentLayout>
-        <div className="detail-main-container">
-          {isLoading ? (
-            <Loading />
-          ) : (
-            <>
-              <h1>{res?.name}</h1>
-              <div className="detail-main-info">
-                <div>
-                  <h2>Eye Color</h2>
-                  <p>{res?.eye_color}</p>
+        <div className="outer-detail-main-container">
+          <div className="detail-main-container">
+            {isLoading ? (
+              <Loading />
+            ) : (
+              <>
+                <h1>{res?.name}</h1>
+                <div className="detail-main-info">
+                  <div>
+                    <h2>Eye Color</h2>
+                    <p>{res?.eye_color}</p>
+                  </div>
+                  <div>
+                    <h2>Gender</h2>
+                    <p>{res?.gender}</p>
+                  </div>
+                  <div>
+                    <h2>Hair Color</h2>
+                    <p>{res?.hair_color}</p>
+                  </div>
+                  <div>
+                    <h2>Height (cm)</h2>
+                    <p>{res?.height}</p>
+                  </div>
+                  <div>
+                    <h2>Birth Year</h2>
+                    <p>{res?.birth_year}</p>
+                  </div>
+                  <div>
+                    <h2>Mass (kg)</h2>
+                    <p>{res?.mass}</p>
+                  </div>
+                  <div>
+                    <h2>Skin Color</h2>
+                    <p>{res?.skin_color}</p>
+                  </div>
+                  <div>
+                    <h2>Films</h2>
+                    <p>{res?.films.length}</p>
+                  </div>
+                  <div>
+                    <h2>Species</h2>
+                    <p>
+                      {res?.species?.length === 0
+                        ? "<No Data>"
+                        : res?.species.length}
+                    </p>
+                  </div>
+                  <div>
+                    <h2>Starships</h2>
+                    <p>
+                      {data?.data?.starships?.length === 0
+                        ? "<No Data>"
+                        : data?.data?.starships.length}
+                    </p>
+                  </div>
+                  <div>
+                    <h2>Vehicles</h2>
+                    <p>
+                      {data?.data?.vehicles?.length === 0
+                        ? "<No Data>"
+                        : data?.data?.vehicles.length}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h2>Gender</h2>
-                  <p>{res?.gender}</p>
-                </div>
-                <div>
-                  <h2>Hair Color</h2>
-                  <p>{res?.hair_color}</p>
-                </div>
-                <div>
-                  <h2>Height (cm)</h2>
-                  <p>{res?.height}</p>
-                </div>
-                <div>
-                  <h2>Birth Year</h2>
-                  <p>{res?.birth_year}</p>
-                </div>
-                <div>
-                  <h2>Mass (kg)</h2>
-                  <p>{res?.mass}</p>
-                </div>
-                <div>
-                  <h2>Skin Color</h2>
-                  <p>{res?.skin_color}</p>
-                </div>
-                <div>
-                  <h2>Films</h2>
-                  <p>{res?.films.length}</p>
-                </div>
-                <div>
-                  <h2>Species</h2>
-                  <p>
-                    {res?.species?.length === 0
-                      ? "<No Data>"
-                      : res?.species.length}
-                  </p>
-                </div>
-                <div>
-                  <h2>Starships</h2>
-                  <p>
-                    {data?.data?.starships?.length === 0
-                      ? "<No Data>"
-                      : data?.data?.starships.length}
-                  </p>
-                </div>
-                <div>
-                  <h2>Vehicles</h2>
-                  <p>
-                    {data?.data?.vehicles?.length === 0
-                      ? "<No Data>"
-                      : data?.data?.vehicles.length}
-                  </p>
-                </div>
-              </div>
-            </>
-          )}
+              </>
+            )}
+          </div>
         </div>
         <BackButton url="/people" />
       </ContentLayout>
