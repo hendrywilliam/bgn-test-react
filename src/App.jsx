@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import "./App.css";
 import Home from "@/pages/Home";
 import { Routes, Route } from "react-router-dom";
+import PageLoading from "./components/PageLoading/PageLoading";
 
 const People = lazy(() => import("@/pages/People"));
 const DetailPeople = lazy(() => import("@/pages/Detail/PeopleDetail"));
@@ -18,7 +19,13 @@ function App() {
       <Route
         path="people"
         element={
-          <Suspense fallback={<>...</>}>
+          <Suspense
+            fallback={
+              <>
+                <PageLoading />
+              </>
+            }
+          >
             <People />
           </Suspense>
         }
@@ -26,7 +33,13 @@ function App() {
       <Route
         path="people/detail/:id"
         element={
-          <Suspense fallback={<>...</>}>
+          <Suspense
+            fallback={
+              <>
+                <PageLoading />
+              </>
+            }
+          >
             <DetailPeople />
           </Suspense>
         }
@@ -34,7 +47,13 @@ function App() {
       <Route
         path="films"
         element={
-          <Suspense fallback={<>...</>}>
+          <Suspense
+            fallback={
+              <>
+                <PageLoading />
+              </>
+            }
+          >
             <Films />
           </Suspense>
         }
@@ -42,7 +61,13 @@ function App() {
       <Route
         path="planets"
         element={
-          <Suspense fallback={<>...</>}>
+          <Suspense
+            fallback={
+              <>
+                <PageLoading />
+              </>
+            }
+          >
             <Planets />
           </Suspense>
         }
@@ -50,7 +75,13 @@ function App() {
       <Route
         path="species"
         element={
-          <Suspense fallback={<>...</>}>
+          <Suspense
+            fallback={
+              <>
+                <PageLoading />
+              </>
+            }
+          >
             <Species />
           </Suspense>
         }
@@ -58,7 +89,13 @@ function App() {
       <Route
         path="starships"
         element={
-          <Suspense fallback={<>...</>}>
+          <Suspense
+            fallback={
+              <>
+                <PageLoading />
+              </>
+            }
+          >
             <Starships />
           </Suspense>
         }
@@ -66,7 +103,13 @@ function App() {
       <Route
         path="vehicles"
         element={
-          <Suspense fallback={<>...</>}>
+          <Suspense
+            fallback={
+              <>
+                <PageLoading />
+              </>
+            }
+          >
             <Vehicles />
           </Suspense>
         }

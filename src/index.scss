@@ -11,6 +11,7 @@
 @import url("./pages/Detail/PeopleDetail/_PeopleDetail.scss");
 @import url("./components/Loading/_Loading.scss");
 @import url("./components/Elements/BackButton/_BackButton.scss");
+@import url("./components/PageLoading/_PageLoading.scss");
 
 :root {
   font-family: "Inter", sans-serif;
@@ -24,4 +25,8 @@
 
 * {
   @apply box-border;
+}
+
+html {
+  @apply min-w-full min-h-screen w-full h-full;
 }
