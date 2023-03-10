@@ -34,8 +34,6 @@ Semua data diperoleh dari https://swapi.dev/documentation/
 * Redux Toolkit/Redux Asnyc Thunk (async handler)
 * Axios
 * ESLint
-* @types/react
-* @types/dom
 * SASS/SCSS
 * Tailwind
 * PropTypes
